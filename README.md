@@ -83,3 +83,36 @@ Las credenciales y API Keys no se almacenan en este repositorio. Las conexiones 
 ---
 
 **Proyecto Final – Ecosistema de Automatización IA**
+
+## Pruebas realizadas
+
+Para validar el funcionamiento del ecosistema se realizaron múltiples ejecuciones con diferentes tipos de respuestas:
+
+| Prueba | Caso evaluado | Resultado esperado |
+|---|---|---|
+| 1 | Experiencia positiva | Sentimiento positivo, urgencia baja y procesamiento automático |
+| 2 | Experiencia negativa | Sentimiento negativo y clasificación automática |
+| 3 | Reclamo de mayor gravedad | Detección de urgencia alta |
+| 4 | Amenaza de acciones legales | Urgencia crítica, revisión humana obligatoria y notificación mediante Slack |
+| 5 | Caso sin necesidad de revisión humana | Continuación automática del flujo y actualización del registro |
+| 6 | Prueba de error (unhappy path) | Activación del Error Handler, registro del error en Airtable y control de continuidad mediante Resume |
+
+Las pruebas permitieron verificar el análisis mediante IA, el enrutamiento condicional, la intervención humana en casos críticos y el tratamiento controlado de errores.
+
+## Dashboard y monitoreo
+
+Se implementó un dashboard en Airtable con los siguientes indicadores:
+
+- Total de encuestas.
+- Encuestas negativas.
+- Encuestas críticas.
+- Pendientes de aprobación humana.
+- Cantidad de errores.
+- Tasa de error.
+- Distribución de respuestas según sentimiento.
+
+La interfaz de Airtable utilizada para visualizar los KPIs se encuentra implementada dentro de la base. Debido a las restricciones de publicación web del plan utilizado, se proporciona como respaldo una vista pública de solo lectura de los registros procesados.
+
+**Vista pública de Airtable:**
+
+https://airtable.com/apptuw0G37gGltgWL/shr85ESAburejXsYi
